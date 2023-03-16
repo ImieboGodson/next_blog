@@ -1,187 +1,144 @@
 [
     {
-        "id": 1,
-        "tags": [
-            "Gaming",
-            "Crypto"
-        ],
+        "id": "colors-and-art",
         "comments": [
             {
                 "id": 1,
                 "author": "Arny Soppett",
                 "profile_image": "https://randomuser.me/api/portraits/med/women/1.jpg",
                 "body": "In congue. Etiam justo. Etiam pretium iaculis justo.",
-                "date": "23/7/2022"
+                "date": "2022-03-17T01:35:07.322Z"
             },
             {
                 "id": 2,
                 "author": "Robin Kyneton",
                 "profile_image": "https://randomuser.me/api/portraits/med/women/5.jpg",
                 "body": "Integer ac leo. Pellentesque ultrices mattis odio. Donec vitae nisi.",
-                "date": "23/4/2022"
+                "date": "2022-03-17T06:35:07.322Z"
             }
         ],
-        "date": "17/4/2022",
         "likes": 31
     },
     {
-        "id": 2,
-        "tags": [
-            "Crypto",
-            "NFT"
-        ],
+        "id": "dark-comedy",
         "comments": [
             {
                 "id": 3,
                 "author": "Cos Partrick",
                 "profile_image": "https://randomuser.me/api/portraits/med/men/7.jpg",
                 "body": "Integer tincidunt ante vel ipsum. Praesent blandit lacinia erat. Vestibulum sed magna at nunc commodo placerat.",
-                "date": "12/7/2022"
+                "date": "2022-01-11T05:35:07.322Z"
             },
             {
                 "id": 4,
                 "author": "Mable Sergeaunt",
                 "profile_image": "https://randomuser.me/api/portraits/med/women/6.jpg",
                 "body": "Aenean lectus. Pellentesque eget nunc. Donec quis orci eget orci vehicula condimentum.",
-                "date": "31/1/2023"
+                "date": "2022-01-11T06:35:07.322Z"
             }
         ],
-        "date": "3/7/2022",
         "likes": 16
     },
     {
-        "id": 3,
-        "tags": [
-            "Gaming"
-        ],
+        "id": "humans-are-still-smart",
         "comments": [
             {
                 "id": 5,
                 "author": "Engracia Pinchon",
                 "profile_image": "https://randomuser.me/api/portraits/med/men/15.jpg",
                 "body": "Proin interdum mauris non ligula pellentesque ultrices. Phasellus id sapien in sapien iaculis congue. Vivamus metus arcu, adipiscing molestie, hendrerit at, vulputate vitae, nisl.",
-                "date": "7/5/2022"
+                "date": "2022-07-17T04:35:07.322Z"
             }
         ],
-        "date": "12/6/2022",
         "likes": 17
     },
     {
-        "id": 4,
-        "tags": [
-            "Crypto"
-        ],
+        "id": "moon-shot",
         "comments": [
             {
                 "id": 6,
                 "author": "Neysa Abrey",
                 "profile_image": "https://randomuser.me/api/portraits/med/women/52.jpg",
                 "body": "Curabitur gravida nisi at nibh. In hac habitasse platea dictumst. Aliquam augue quam, sollicitudin vitae, consectetuer eget, rutrum at, lorem.",
-                "date": "23/10/2022"
+                "date": "2022-03-21T08:35:07.322Z"
             },
             {
                 "id": 7,
                 "author": "Valentine Demare",
                 "profile_image": "https://randomuser.me/api/portraits/med/women/54.jpg",
                 "body": "Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vivamus vestibulum sagittis sapien. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.",
-                "date": "20/10/2022"
+                "date": "2022-03-21T08:45:07.322Z"
             },
             {
                 "id": 8,
                 "author": "Ricky Candlish",
                 "profile_image": "https://randomuser.me/api/portraits/med/men/45.jpg",
                 "body": "Morbi non lectus. Aliquam sit amet diam in magna bibendum imperdiet. Nullam orci pede, venenatis non, sodales sed, tincidunt eu, felis.",
-                "date": "14/10/2022"
+                "date": "2022-03-22T08:45:07.322Z"
             }
         ],
-        "date": "12/11/2022",
         "likes": 48
     },
     {
-        "id": 5,
-        "tags": [
-            "NFT"
-        ],
+        "id": "nft-craze",
         "comments": [],
-        "date": "6/4/2022",
         "likes": 27
     },
     {
-        "id": 6,
-        "tags": [
-            "Crypto"
-        ],
+        "id": "nft-millionaires",
         "comments": [
             {
                 "id": 9,
                 "author": "Gary Gull",
                 "profile_image": "https://randomuser.me/api/portraits/med/men/35.jpg",
                 "body": "In congue. Etiam justo. Etiam pretium iaculis justo.",
-                "date": "14/1/2023"
+                "date": "2022-06-18T04:45:07.322Z"
             }
         ],
-        "date": "17/6/2022",
         "likes": 65
     },
     {
-        "id": 7,
-        "tags": [
-            "Gaming"
-        ],
+        "id": "nft-still-gold",
         "comments": [
             {
                 "id": 10,
                 "author": "Patience Canet",
                 "profile_image": "https://randomuser.me/api/portraits/med/women/50.jpg",
                 "body": "Aliquam quis turpis eget elit sodales scelerisque. Mauris sit amet eros. Suspendisse accumsan tortor quis turpis.",
-                "date": "6/8/2022"
+                "date": "2022-06-06T08:30:07.322Z"
             }
         ],
-        "date": "8/6/2022",
         "likes": 59
     },
     {
-        "id": 8,
-        "tags": [
-            "NFT"
-        ],
+        "id": "strange-social-theories",
         "comments": [],
-        "date": "28/2/2023",
         "likes": 39
     },
     {
-        "id": 9,
-        "tags": [
-            "NFT",
-            "Crypto"
-        ],
+        "id": "superheros-are-not-real",
         "comments": [
             {
                 "id": 11,
                 "author": "Marika Sparkes",
                 "profile_image": "https://randomuser.me/api/portraits/med/women/25.jpg",
                 "body": "Curabitur at ipsum ac tellus semper interdum. Mauris ullamcorper purus sit amet nulla. Quisque arcu libero, rutrum ac, lobortis vel, dapibus at, diam.",
-                "date": "20/10/2022"
+                "date": "2022-06-01T01:35:07.322Z"
             }
         ],
-        "date": "18/2/2023",
         "likes": 51
     },
     {
-        "id": 10,
-        "tags": [
-            "Crypto"
-        ],
+        "id": "vr-got-us-inside",
         "comments": [
             {
                 "id": 12,
                 "author": "Kort Leguey",
                 "profile_image": "https://randomuser.me/api/portraits/med/women/26.jpg",
                 "body": "Pellentesque at nulla. Suspendisse potenti. Cras in purus eu magna vulputate luctus.",
-                "date": "25/11/2022"
+                "date": "2022-02-29T01:35:07.322Z"
             }
         ],
-        "date": "5/4/2022",
         "likes": 88
     }
 ]
