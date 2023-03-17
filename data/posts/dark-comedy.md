@@ -1,12 +1,12 @@
 ---
 title: 'Dark Comedy In AI Shows'
-tag: 'Artificial Intelligence'
+tag: 'ai'
 excerpt: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Praesent elementum facilisis leo vel fringilla est ullamcorper eget.'
 coverImage: '/assets/posts/dark-comedy/rick-morty.jpg'
 date: '2022-01-10T05:35:07.322Z'
 author:
   name: Freddy Cook
-  picture: 'https://randomuser.me/api/portraits/med/men/105.jpg'
+  picture: 'https://randomuser.me/api/portraits/med/men/1.jpg'
 ogImage:
   url: '/assets/posts/dark-comedy/rick-morty.jpg'
 ---

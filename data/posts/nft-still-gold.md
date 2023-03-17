@@ -6,7 +6,7 @@ coverImage: '/assets/posts/nft-still-gold/best-nft-arts.jpg'
 date: '2022-06-06T06:35:07.322Z'
 author:
   name: JJ Kasper
-  picture: 'https://randomuser.me/api/portraits/med/men/100.jpg'
+  picture: 'https://randomuser.me/api/portraits/med/men/5.jpg'
 ogImage:
   url: '/assets/posts/nft-still-gold/best-nft-arts.jpg'
 ---

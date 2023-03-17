@@ -6,7 +6,7 @@ coverImage: '/assets/posts/nft-craze/moon.jpg'
 date: '2022-03-21T05:35:07.322Z'
 author:
   name: Joe Haddad
-  picture: 'https://randomuser.me/api/portraits/med/men/102.jpg'
+  picture: 'https://randomuser.me/api/portraits/med/men/2.jpg'
 ogImage:
   url: '/assets/posts/nft-craze/moon.jpg'
 ---

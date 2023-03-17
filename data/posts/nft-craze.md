@@ -6,7 +6,7 @@ coverImage: '/assets/posts/nft-craze/barbora.jpg'
 date: '2022-05-18T05:35:07.322Z'
 author:
   name: Tim Neutkens
-  picture: 'https://randomuser.me/api/portraits/med/men/101.jpg'
+  picture: 'https://randomuser.me/api/portraits/med/men/3.jpg'
 ogImage:
   url: '/assets/posts/nft-craze/barbora.jpg'
 ---

@@ -6,7 +6,7 @@ coverImage: '/assets/posts/colors-and-art/colors-and-art.jpg'
 date: '2022-03-16T05:35:07.322Z'
 author:
   name: simisola Ireoluwa
-  picture: 'https://randomuser.me/api/portraits/med/women/107.jpg'
+  picture: 'https://randomuser.me/api/portraits/med/women/50.jpg'
 ogImage:
   url: '/assets/posts/colors-and-art/colors-and-art.jpg'
 ---

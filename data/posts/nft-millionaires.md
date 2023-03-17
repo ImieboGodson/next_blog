@@ -6,7 +6,7 @@ coverImage: '/assets/posts/nft-millionaires/nft-1.jpg'
 date: '2022-06-17T04:35:07.322Z'
 author:
   name: Blake Thomas
-  picture: 'https://randomuser.me/api/portraits/med/men/103.jpg'
+  picture: 'https://randomuser.me/api/portraits/med/men/4.jpg'
 ogImage:
   url: '/assets/posts/nft-millionaires/nft-1.jpg'
 ---
