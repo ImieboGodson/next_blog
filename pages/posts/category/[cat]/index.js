@@ -7,7 +7,7 @@ export default function Category() {
       <Head>
         <title>Post Categories</title>
       </Head>
-      <main>HELOO</main>
+      <main>Category Page</main>
     </div>
   );
 }
