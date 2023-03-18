@@ -1,3 +1,4 @@
+import PostsLayout from "@/components/PostsLayout";
 import Head from "next/head";
 import React from "react";
 
@@ -7,7 +8,7 @@ export default function Category() {
       <Head>
         <title>Post Categories</title>
       </Head>
-      <main>Category Page</main>
+      <PostsLayout>Category Page</PostsLayout>
     </div>
   );
 }
