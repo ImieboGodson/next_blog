@@ -3,7 +3,7 @@ import React from "react";
 
 export default function PostsCategoryNavbar({ page }) {
   return (
-    <div className="my-5">
+    <div className="my-7">
       <ul className="flex justify-center items-center">
         <Link href="/">
           <li

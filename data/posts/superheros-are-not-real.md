@@ -2,13 +2,13 @@
 title: 'Superheros Are Not Real Even In VR'
 tag: 'technology'
 excerpt: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Praesent elementum facilisis leo vel fringilla est ullamcorper eget.'
-coverImage: '/assets/posts/superheros-are-not-real/superhero.jpg'
+coverImage: '/assets/posts/superheroes-are-not-real/superhero.jpg'
 date: '2022-05-26T05:35:07.322Z'
 author:
   name: David Gunmanson
   picture: 'https://randomuser.me/api/portraits/med/men/7.jpg'
 ogImage:
-  url: '/assets/posts/superheros-are-not-real/superhero.jpg'
+  url: '/assets/posts/superheroes-are-not-real/superhero.jpg'
 ---
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Praesent elementum facilisis leo vel fringilla est ullamcorper eget. At imperdiet dui accumsan sit amet nulla facilities morbi tempus. Praesent elementum facilisis leo vel fringilla. Congue mauris rhoncus aenean vel. Egestas sed tempus urna et pharetra pharetra massa massa ultricies.

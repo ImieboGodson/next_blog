@@ -17,3 +17,54 @@ body {
 .search-shadow {
   box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
 }
+
+/* .grid-layout > :first-child
+{
+  background: #000;
+} */
+
+.topPost {
+  background: #000;
+}
+
+.grid-layout > :first-child .coverPicture {
+  width: 94%;
+}
+
+.grid-layout > :first-child .category-text {
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1;
+}
+
+.grid-layout > :first-child h1 {
+  width: 85%;
+  font-size: 2.1rem;
+  font-weight: 700;
+  line-height: 3rem;
+}
+
+.grid-layout > :first-child .exrcept-text {
+  width: 81%;
+  font-size: 0.975rem/* 14px */;
+  line-height: 1.35rem/* 20px */;
+}
+
+.grid-layout > :first-child .authorDetail {
+  margin-top: 1.5rem;
+}
+
+.grid-layout > :first-child .authorDetail > .authorPhoto {
+  width: 3.5rem;
+  height: 3.5rem;
+}
+
+.grid-layout > :first-child .authorDetail > div > .authorName {
+  font-size: 1rem;
+  line-height: 1.4rem;
+}
+
+.grid-layout > :first-child .authorDetail > div > .postDate {
+  font-size: 0.8rem;
+  line-height: 1.2rem;
+}
