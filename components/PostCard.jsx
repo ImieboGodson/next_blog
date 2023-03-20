@@ -1,31 +1,11 @@
+import formatCategory from "@/lib/formatCategory";
+import truncateText from "@/lib/truncateText";
 import Image from "next/image";
 import Link from "next/link";
 import Time from "./Time";
 
 export function PostCard({ post }) {
   const { data, realSlug } = post;
-
-  let postCategory = "";
-
-  switch (data.tag) {
-    case "ai":
-      postCategory = "Artificial Intelligence";
-      break;
-    case "nft":
-      postCategory = "NFT";
-      break;
-    case "crypto":
-      postCategory = "Crypto";
-      break;
-    case "technology":
-      postCategory = "Technology";
-      break;
-    default:
-      postCategory = null;
-      break;
-  }
-
-  console.log(postCategory);
 
   return (
     <div className="w-full min-h-fit grid first:grid-cols-2 first:grid-rows-1 grid-cols-1 grid-rows-2 gap-4 first:gap-0 first:col-span-full first:topPost">
@@ -39,14 +19,16 @@ export function PostCard({ post }) {
           />
         </div>
       </Link>
-      <div className="w-full min-h-fit p-4">
-        <p className="text-sm category-text">{postCategory}</p>
+      <div className="w-full min-h-fit flex flex-col justify-between items-start p-4">
+        <p className="text-sm category-text">{formatCategory(data.tag)}</p>
         <Link href={`/posts/category/${data.tag}/${realSlug}`}>
           <h1 className="w-[95%] mt-4 text-lg font-semibold hover:underline cursor-pointer">
             {data.title}
           </h1>
         </Link>
-        <p className="mt-4 text-sm exrcept-text">{data.excerpt}</p>
+        <p className="mt-4 text-sm exrcept-text">
+          {truncateText(130, data.excerpt)}
+        </p>
         <div className="mt-4 flex justify-start items-center authorDetail">
           <div className="mr-4 w-[2.6rem] h-[2.6rem] relative rounded-full overflow-hidden authorPhoto">
             <Image
@@ -56,11 +38,10 @@ export function PostCard({ post }) {
               src={data.author.picture}
             />
           </div>
-          <div className="">
+          <div className="flex flex-col justify-start items-start">
             <p className="text-sm font-semibold authorName">
               {data.author.name}
             </p>
-            {/* <p className="text-xs postDate">Jun 27, 2023</p> */}
             <Time dateString={data.date} />
           </div>
         </div>

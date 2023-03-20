@@ -29,6 +29,7 @@ body {
 
 .grid-layout > :first-child .coverPicture {
   width: 94%;
+  min-height: 355px;
 }
 
 .grid-layout > :first-child .category-text {
