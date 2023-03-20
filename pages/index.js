@@ -23,7 +23,7 @@ export default function Home({ posts }) {
       </Head>
       <main className="w-full min-h-fit flex items-top justify-center text-stone-700">
         <PostsLayout>
-          <main className=" mt-5">
+          <main className=" mt-8">
             <PostCardsLayout>
               {posts.map((post) => {
                 return <PostCard key={posts[post]} post={post} />;
@@ -39,7 +39,7 @@ export default function Home({ posts }) {
 export async function getStaticProps(context) {
   const response = await fetch("http://localhost:3000/api/posts");
   const { message, posts } = await response.json();
-  console.log(posts);
+  // console.log(posts);
 
   return {
     props: {

@@ -19,12 +19,6 @@ export default function PostsLayout({ children }) {
     <div className="w-full mt-3 p-4 relative">
       <div className="flex flex-col justify-center items-center">
         <div className="w-full h-[170px] bg-black text-white rounded-[38px] flex justify-center items-center">
-          {/* <Image
-            src="/triangle.png"
-            width={35}
-            height={35}
-            alt="triangle icon"
-          /> */}
           <p className="tracking-wide text-4xl font-bold">Blog</p>
         </div>
         <SearchForm />

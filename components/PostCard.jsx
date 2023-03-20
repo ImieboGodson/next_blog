@@ -1,12 +1,31 @@
 import Image from "next/image";
 import Link from "next/link";
-import { useEffect } from "react";
+import Time from "./Time";
 
 export function PostCard({ post }) {
   const { data, realSlug } = post;
-  useEffect(() => {
-    console.log(realSlug);
-  }, []);
+
+  let postCategory = "";
+
+  switch (data.tag) {
+    case "ai":
+      postCategory = "Artificial Intelligence";
+      break;
+    case "nft":
+      postCategory = "NFT";
+      break;
+    case "crypto":
+      postCategory = "Crypto";
+      break;
+    case "technology":
+      postCategory = "Technology";
+      break;
+    default:
+      postCategory = null;
+      break;
+  }
+
+  console.log(postCategory);
 
   return (
     <div className="w-full min-h-fit grid first:grid-cols-2 first:grid-rows-1 grid-cols-1 grid-rows-2 gap-4 first:gap-0 first:col-span-full first:topPost">
@@ -21,7 +40,7 @@ export function PostCard({ post }) {
         </div>
       </Link>
       <div className="w-full min-h-fit p-4">
-        <p className="text-sm category-text">{data.tag}</p>
+        <p className="text-sm category-text">{postCategory}</p>
         <Link href={`/posts/category/${data.tag}/${realSlug}`}>
           <h1 className="w-[95%] mt-4 text-lg font-semibold hover:underline cursor-pointer">
             {data.title}
@@ -41,7 +60,8 @@ export function PostCard({ post }) {
             <p className="text-sm font-semibold authorName">
               {data.author.name}
             </p>
-            <p className="text-xs postDate">Jun 27, 2023</p>
+            {/* <p className="text-xs postDate">Jun 27, 2023</p> */}
+            <Time dateString={data.date} />
           </div>
         </div>
       </div>

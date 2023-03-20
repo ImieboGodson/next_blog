@@ -25,11 +25,13 @@ export default function handler(req, res) {
       return getPostBySlugs(slug);
     });
 
-    const postsByCategory = posts.filter((post) => {
-      if (post.data.tag === cat) {
-        return post.data;
-      }
-    });
+    const postsByCategory = posts
+      .filter((post) => {
+        if (post.data.tag === cat) {
+          return post.data;
+        }
+      })
+      .sort((post1, post2) => (post1.date > post2.date ? -1 : 1));
 
     if (!postsByCategory) {
       return res.status(400).json({

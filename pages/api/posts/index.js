@@ -10,9 +10,9 @@ export default function handler(req, res) {
         message: "Internal server error, resource not available",
       });
     }
-    const posts = slugs.map((slug) => {
-      return getPostBySlugs(slug);
-    });
+    const posts = slugs
+      .map((slug) => getPostBySlugs(slug))
+      .sort((post1, post2) => (post1.data.date > post2.data.date ? -1 : 1));
 
     return res.status(200).json({
       message: "Data successfully Retrieved",
