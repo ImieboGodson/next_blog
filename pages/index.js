@@ -16,7 +16,7 @@ export default function Home({ posts }) {
   return (
     <>
       <Head>
-        <title>MetalBox</title>
+        <title>MetalBox | A Blog That Servers MarkDown Contents</title>
         <meta name="description" content="A Blog Built with Nextjs" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />

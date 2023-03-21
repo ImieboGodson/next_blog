@@ -41,7 +41,7 @@ export default function handler(req, res) {
 
     return res.status(200).json({
       message: "Success",
-      postsByCategory,
+      posts: postsByCategory,
     });
   }
   return res.status(404).json({ message: "Invalid request method" });
