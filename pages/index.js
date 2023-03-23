@@ -26,7 +26,7 @@ export default function Home({ posts }) {
 }
 
 export async function getStaticProps(context) {
-  const response = await fetch("http://localhost:3000/api/posts");
+  const response = await fetch(process.env.NEXT_PUBLIC_BASE_URL + `/api/posts`);
   const { posts } = await response.json();
 
   return {
