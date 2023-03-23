@@ -82,7 +82,7 @@ export default function Post({ post, fitleredRelatedPosts }) {
           </div>
         </div>
         <div className="mx-auto w-[70%] flex flex-col items-center">
-          <div className="relative mt-[-100px] w-full h-[500px] rounded-[35px] overflow-hidden">
+          <div className="relative mt-[-100px] w-full h-[500px] rounded-[35px] overflow-hidden cover-shadow">
             <Image
               className="object-cover"
               src={data.coverImage}
@@ -110,7 +110,7 @@ export default function Post({ post, fitleredRelatedPosts }) {
 export async function getStaticProps(context) {
   const { cat, slug } = context.params;
   const response = await fetch(
-    `http://localhost:3000/api/posts/category/${cat}/${slug}`
+    process.env.NEXT_PUBLIC_BASE_URL + `/api/posts/category/${cat}/${slug}`
   );
   const { post, relatedPosts } = await response.json();
   const content = await markdownToHtml(post.content);
