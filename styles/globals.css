@@ -69,3 +69,22 @@ body {
   font-size: 0.8rem;
   line-height: 1.2rem;
 }
+
+.postbody {
+  @apply text-lg leading-relaxed;
+}
+
+.postbody p,
+.postbody ul,
+.postbody ol,
+.postbody blockquote {
+  @apply my-6;
+}
+
+.postbody h2 {
+  @apply text-3xl mt-12 mb-4 leading-snug;
+}
+
+.postbody h3 {
+  @apply text-2xl mt-8 mb-4 leading-snug;
+}

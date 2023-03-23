@@ -3,7 +3,7 @@ import React from "react";
 
 export default function Header() {
   return (
-    <div className="p-4 flex item-center justify-between">
+    <div className="px-4 py-8 flex item-center justify-between">
       <Link href="/">
         <div>
           <p className="tracking-tighter text-3xl font-extrabold">METALBOX</p>
