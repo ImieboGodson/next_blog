@@ -7,7 +7,7 @@ export default function handler(req, res) {
   const slugs = getPostSlugs();
 
   const { cat, slug } = query;
-  console.log(slug);
+  console.log(cat);
 
   if (method === "GET") {
     //Check for validity of category passed in request
@@ -30,26 +30,16 @@ export default function handler(req, res) {
         .status(400)
         .json({ message: "Invalid request, resource not found" });
     }
-    return res.status(200).json({ message: "Success", post });
 
-    // const slugs = getPostSlugs();
-    // if (!slugs) {
-    //   res.status(500).json({
-    //     message: "Internal server error, resource not available",
-    //   });
-    // }
-    // const posts = slugs.map((s) => {
-    //   return getPostBySlugs(s);
-    // });
+    const allPosts = slugs.map((slug) => {
+      return getPostBySlugs(slug);
+    });
 
-    // const post = posts.find((post) => post.data.title === slug);
-    // console.log(post);
-    // if (!post) {
-    //   return res
-    //     .status(400)
-    //     .json({ message: "Invalid request, resource not found" });
-    // }
-    // return res.status(200).json({ message: "Success", post });
+    const relatedPosts = allPosts
+      .filter((pst) => pst.data.tag === cat)
+      .sort((pst1, pst2) => (pst1.data.date > pst2.data.date ? -1 : 1));
+
+    return res.status(200).json({ message: "Success", post, relatedPosts });
   }
   res.status(404).json({ message: "Invalid request method" });
 }

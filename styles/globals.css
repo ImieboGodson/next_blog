@@ -38,7 +38,7 @@ body {
   line-height: 1;
 }
 
-.grid-layout > :first-child h1 {
+.grid-layout > :first-child .post-title {
   width: 85%;
   font-size: 2.1rem;
   font-weight: 700;

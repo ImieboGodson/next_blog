@@ -1,3 +1,5 @@
+import { PostCard } from "@/components/PostCard";
+import PostCardsLayout from "@/components/PostCardsLayout";
 import Time from "@/components/Time";
 import formatCategory from "@/lib/formatCategory";
 import Head from "next/head";
@@ -5,7 +7,7 @@ import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 
-export default function Post({ post }) {
+export default function Post({ post, fitleredRelatedPosts }) {
   const { data, content, realSlug } = post;
   return (
     <article>
@@ -17,9 +19,11 @@ export default function Post({ post }) {
         <div className="relative flex justify-center items-start p-10 bg-black text-white">
           <div className="w-[75%] h-[250px] py-6 flex justify-between items-start">
             <div className="">
-              <p className="text-base font-medium">
-                {formatCategory(data.tag)}
-              </p>
+              <Link href={`/posts/category/${data.tag}/`}>
+                <p className="text-base font-medium">
+                  {formatCategory(data.tag)}
+                </p>
+              </Link>
               <h1 className="mt-6 w-[80%] text-4xl font-extrabold">
                 {data.title}
               </h1>
@@ -76,8 +80,8 @@ export default function Post({ post }) {
             </div>
           </div>
         </div>
-        <div className="">
-          <div className="relative mt-[-100px] mx-auto w-[70%] h-[500px] rounded-[35px] overflow-hidden">
+        <div className="mx-auto w-[70%] flex flex-col items-center">
+          <div className="relative mt-[-100px] w-full h-[500px] rounded-[35px] overflow-hidden">
             <Image
               className="object-cover"
               src={data.coverImage}
@@ -85,7 +89,7 @@ export default function Post({ post }) {
               alt="Post Cover Image"
             />
           </div>
-          <div className="w-[65%] my-14 mx-auto text-lg">
+          <div className="w-[90%] my-14 mx-auto text-lg">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut vitae
             lectus iaculis, convallis diam id, accumsan nunc. Suspendisse
             vehicula sed elit in mattis. Donec hendrerit odio quis neque
@@ -123,9 +127,12 @@ export default function Post({ post }) {
             justo nec interdum.
           </div>
         </div>
-        <div>
-          <h1>Related Articles</h1>
-          <div></div>
+        <div className="w-full flex flex-col justify-between items-center">
+          <h1 className="my-12 text-3xl font-extrabold">Related Articles</h1>
+          <PostCardsLayout
+            posts={fitleredRelatedPosts}
+            cardType="related-posts"
+          />
         </div>
       </main>
     </article>
@@ -137,11 +144,16 @@ export async function getStaticProps(context) {
   const response = await fetch(
     `http://localhost:3000/api/posts/category/${cat}/${slug}`
   );
-  const { post } = await response.json();
+  const { post, relatedPosts } = await response.json();
+
+  const fitleredRelatedPosts = relatedPosts.filter(
+    (pst) => pst.realSlug !== slug
+  );
 
   return {
     props: {
       post,
+      fitleredRelatedPosts,
     },
   };
 }

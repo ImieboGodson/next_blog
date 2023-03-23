@@ -4,13 +4,23 @@ import Image from "next/image";
 import Link from "next/link";
 import Time from "./Time";
 
-export function PostCard({ post }) {
+export function PostCard({ post, cardType }) {
   const { data, realSlug } = post;
 
   return (
-    <div className="w-full min-h-fit grid first:grid-cols-2 first:grid-rows-1 grid-cols-1 grid-rows-2 gap-4 first:gap-0 first:col-span-full first:topPost">
+    <div
+      className={`w-full min-h-fit grid grid-cols-1 grid-rows-2 gap-4 ${
+        cardType === "normal"
+          ? "first:grid-cols-2 first:grid-rows-1 first:gap-0 first:col-span-full first:topPost"
+          : ""
+      }`}
+    >
       <Link href={`/posts/category/${data.tag}/${realSlug}`}>
-        <div className="relative w-full min-h-[270px] h-full rounded-[20px] overflow-hidden cursor-pointer coverPicture">
+        <div
+          className={`relative w-full min-h-[270px] h-full rounded-[20px] overflow-hidden cursor-pointer ${
+            cardType === "normal" ? "coverPicture" : ""
+          }`}
+        >
           <Image
             className="object-cover"
             fill
@@ -20,17 +30,41 @@ export function PostCard({ post }) {
         </div>
       </Link>
       <div className="w-full min-h-fit flex flex-col justify-between items-start p-4">
-        <p className="text-sm category-text">{formatCategory(data.tag)}</p>
+        <Link href={`/posts/category/${data.tag}`}>
+          <p
+            className={`text-sm {
+            cardType === "normal" ? "category-text" : ""
+          }`}
+          >
+            {formatCategory(data.tag)}
+          </p>
+        </Link>
         <Link href={`/posts/category/${data.tag}/${realSlug}`}>
-          <h1 className="w-[95%] mt-4 text-lg font-semibold hover:underline cursor-pointer">
+          <h1
+            className={`w-[95%] mt-4 text-lg font-semibold hover:underline cursor-pointer ${
+              cardType === "normal" ? "post-title" : ""
+            }`}
+          >
             {data.title}
           </h1>
         </Link>
-        <p className="mt-4 text-sm exrcept-text">
+        <p
+          className={`mt-4 text-sm ${
+            cardType === "normal" ? "exrcept-text" : ""
+          }`}
+        >
           {truncateText(130, data.excerpt)}
         </p>
-        <div className="mt-4 flex justify-start items-center authorDetail">
-          <div className="mr-4 w-[2.6rem] h-[2.6rem] relative rounded-full overflow-hidden authorPhoto">
+        <div
+          className={`mt-4 flex justify-start items-center ${
+            cardType === "normal" ? "authorDetail" : ""
+          }`}
+        >
+          <div
+            className={`mr-4 w-[2.6rem] h-[2.6rem] relative rounded-full overflow-hidden ${
+              cardType === "normal" ? "authorPhoto" : ""
+            }`}
+          >
             <Image
               className="object-cover"
               fill
@@ -39,7 +73,11 @@ export function PostCard({ post }) {
             />
           </div>
           <div className="flex flex-col justify-start items-start">
-            <p className="text-sm font-semibold authorName">
+            <p
+              className={`text-sm font-semibold ${
+                cardType === "normal" ? "authorName" : ""
+              }`}
+            >
               {data.author.name}
             </p>
             <Time dateString={data.date} />

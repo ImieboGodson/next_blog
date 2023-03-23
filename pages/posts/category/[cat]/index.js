@@ -15,7 +15,7 @@ export default function Category({ posts }) {
       </Head>
       <main className="w-full min-h-fit flex items-top justify-center text-stone-700">
         <PostsLayout>
-          <PostCardsLayout posts={posts} />
+          <PostCardsLayout posts={posts} cardType="normal" />
         </PostsLayout>
       </main>
     </div>
