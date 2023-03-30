@@ -1,5 +1,6 @@
 import PostCardsLayout from "@/components/PostCardsLayout";
 import PostsLayout from "@/components/PostsLayout";
+import { fetchPosts, fetchPostsByCategory } from "@/lib/fetchPosts";
 import formatCategory from "@/lib/formatCategory";
 import Head from "next/head";
 import { useRouter } from "next/router";
@@ -15,7 +16,11 @@ export default function Category({ posts }) {
       </Head>
       <main className="w-full min-h-fit flex items-top justify-center text-stone-700">
         <PostsLayout>
-          <PostCardsLayout posts={posts} cardType="normal" />
+          {!posts ? (
+            <p>No Posts Available at the Moment</p>
+          ) : (
+            <PostCardsLayout posts={posts} cardType="normal" />
+          )}
         </PostsLayout>
       </main>
     </div>
@@ -24,10 +29,7 @@ export default function Category({ posts }) {
 
 export async function getStaticProps(context) {
   const category = context.params.cat;
-  const response = await fetch(
-    process.env.NEXT_PUBLIC_BASE_URL + `/api/posts/category/${category}`
-  );
-  const { posts } = await response.json();
+  const posts = await fetchPostsByCategory(category);
   return {
     props: {
       posts,
@@ -36,17 +38,19 @@ export async function getStaticProps(context) {
 }
 
 export async function getStaticPaths() {
-  const response = await fetch(process.env.NEXT_PUBLIC_BASE_URL + `/api/posts`);
-  const { posts } = await response.json();
-  const paths = posts.map((post) => {
+  const posts = await fetchPosts();
+  // console.log(posts);
+  // const categories = ["nft", "ai", "crypto", "technology"];
+  const allPaths = posts.map((post) => {
     return {
       params: {
-        cat: post.data.tag,
+        cat: post.data.tag.toString(),
       },
     };
   });
+
   return {
-    paths,
+    paths: allPaths,
     fallback: false,
   };
 }

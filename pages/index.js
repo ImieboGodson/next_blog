@@ -2,6 +2,7 @@ import Head from "next/head";
 import { Inter } from "next/font/google";
 import PostsLayout from "@/components/PostsLayout";
 import PostCardsLayout from "@/components/PostCardsLayout";
+import { getAllPosts, getPostBySlugs, getPostSlugs } from "@/lib/getPosts";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -17,7 +18,11 @@ export default function Home({ posts }) {
       <main className="w-full min-h-fit flex items-top justify-center text-stone-700">
         <PostsLayout>
           <main className=" mt-8">
-            <PostCardsLayout posts={posts} cardType="normal" />
+            {!posts ? (
+              <p>No Posts Available at the Moment</p>
+            ) : (
+              <PostCardsLayout posts={posts} cardType="normal" />
+            )}
           </main>
         </PostsLayout>
       </main>
@@ -26,9 +31,8 @@ export default function Home({ posts }) {
 }
 
 export async function getStaticProps(context) {
-  const response = await fetch(process.env.NEXT_PUBLIC_BASE_URL + `/api/posts`);
-  const { posts } = await response.json();
-
+  const posts = getAllPosts();
+  console.log(posts);
   return {
     props: {
       posts,
