@@ -1,7 +1,7 @@
 import PostCardsLayout from "@/components/PostCardsLayout";
 import PostsLayout from "@/components/PostsLayout";
-import { fetchPosts, fetchPostsByCategory } from "@/lib/fetchPosts";
 import formatCategory from "@/lib/formatCategory";
+import { getAllCategory, getPostsByCategory } from "@/lib/getPosts";
 import Head from "next/head";
 import { useRouter } from "next/router";
 import React from "react";
@@ -29,7 +29,7 @@ export default function Category({ posts }) {
 
 export async function getStaticProps(context) {
   const category = context.params.cat;
-  const posts = await fetchPostsByCategory(category);
+  const posts = getPostsByCategory(category);
   return {
     props: {
       posts,
@@ -38,19 +38,17 @@ export async function getStaticProps(context) {
 }
 
 export async function getStaticPaths() {
-  const posts = await fetchPosts();
-  // console.log(posts);
-  // const categories = ["nft", "ai", "crypto", "technology"];
-  const allPaths = posts.map((post) => {
+  const categories = getAllCategory();
+  const allCategoryPaths = categories.map((cat) => {
     return {
       params: {
-        cat: post.data.tag.toString(),
+        cat: cat.toString(),
       },
     };
   });
 
   return {
-    paths: allPaths,
+    paths: allCategoryPaths,
     fallback: false,
   };
 }

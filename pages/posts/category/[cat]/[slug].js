@@ -3,14 +3,19 @@ import PostCardsLayout from "@/components/PostCardsLayout";
 import Time from "@/components/Time";
 import { fetchPosts } from "@/lib/fetchPosts";
 import formatCategory from "@/lib/formatCategory";
+import {
+  getPostBySlugs,
+  getRelatedPosts,
+  getSortedPosts,
+} from "@/lib/getPosts";
 import { markdownToHtml } from "@/lib/markdownToHtml";
 import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 
-export default function Post({ post, fitleredRelatedPosts }) {
-  const { data, content, realSlug } = post;
+export default function Post({ post, relatedPosts }) {
+  const { data, postbody } = post;
   return (
     <>
       {!post ? (
@@ -97,11 +102,11 @@ export default function Post({ post, fitleredRelatedPosts }) {
               </div>
               <div
                 className="w-[90%] my-10 mx-auto postbody"
-                dangerouslySetInnerHTML={{ __html: content }}
+                dangerouslySetInnerHTML={{ __html: postbody }}
               ></div>
             </div>
             <>
-              {!fitleredRelatedPosts ? (
+              {!relatedPosts ? (
                 ""
               ) : (
                 <div className="w-full flex flex-col justify-between items-center">
@@ -109,7 +114,7 @@ export default function Post({ post, fitleredRelatedPosts }) {
                     Related Articles
                   </h1>
                   <PostCardsLayout
-                    posts={fitleredRelatedPosts}
+                    posts={relatedPosts}
                     cardType="related-posts"
                   />
                 </div>
@@ -123,8 +128,7 @@ export default function Post({ post, fitleredRelatedPosts }) {
 }
 
 export async function getStaticPaths() {
-  const posts = await fetchPosts();
-  // const { posts } = await response.json();
+  const posts = getSortedPosts();
   const paths = posts.map((post) => {
     return {
       params: {
@@ -133,7 +137,6 @@ export async function getStaticPaths() {
       },
     };
   });
-  // console.log(paths);
   return {
     paths,
     fallback: false,
@@ -142,23 +145,18 @@ export async function getStaticPaths() {
 
 export async function getStaticProps(context) {
   const { cat, slug } = context.params;
-  const response = await fetch(
-    process.env.NEXT_PUBLIC_BASE_URL + `/api/posts/category/${cat}/${slug}`
-  );
-  const { post, relatedPosts } = await response.json();
-  const content = await markdownToHtml(post.content);
+  const { data, content, realSlug } = getPostBySlugs(slug);
+  const postbody = await markdownToHtml(content);
 
-  const fitleredRelatedPosts = relatedPosts.filter(
-    (pst) => pst.realSlug !== slug
-  );
+  const relatedPosts = getRelatedPosts(cat, slug);
 
   return {
     props: {
       post: {
-        ...post,
-        content,
+        data,
+        postbody,
       },
-      fitleredRelatedPosts,
+      relatedPosts,
     },
   };
 }
