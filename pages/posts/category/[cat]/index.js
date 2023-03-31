@@ -1,3 +1,4 @@
+import PageLayout from "@/components/PageLayout";
 import PostCardsLayout from "@/components/PostCardsLayout";
 import PostsLayout from "@/components/PostsLayout";
 import formatCategory from "@/lib/formatCategory";
@@ -14,15 +15,17 @@ export default function Category({ posts }) {
       <Head>
         <title>{`Category: ${categoryText} | MetalBox`}</title>
       </Head>
-      <main className="w-full min-h-fit flex items-top justify-center text-stone-700">
-        <PostsLayout>
-          {!posts ? (
-            <p>No Posts Available at the Moment</p>
-          ) : (
-            <PostCardsLayout posts={posts} cardType="normal" />
-          )}
-        </PostsLayout>
-      </main>
+      <PageLayout>
+        <main className="w-full min-h-fit flex items-top justify-center text-stone-700">
+          <PostsLayout>
+            {!posts ? (
+              <p>No Posts Available at the Moment</p>
+            ) : (
+              <PostCardsLayout posts={posts} cardType="normal" />
+            )}
+          </PostsLayout>
+        </main>
+      </PageLayout>
     </div>
   );
 }

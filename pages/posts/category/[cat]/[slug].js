@@ -1,7 +1,6 @@
-import { PostCard } from "@/components/PostCard";
+import PageLayout from "@/components/PageLayout";
 import PostCardsLayout from "@/components/PostCardsLayout";
 import Time from "@/components/Time";
-import { fetchPosts } from "@/lib/fetchPosts";
 import formatCategory from "@/lib/formatCategory";
 import {
   getPostBySlugs,
@@ -28,7 +27,7 @@ export default function Post({ post, relatedPosts }) {
           </Head>
           <main className="">
             <div className="relative flex justify-center items-start p-10 bg-black text-white">
-              <div className="w-[75%] h-[250px] py-6 flex justify-between items-start">
+              <div className="w-[70%] h-[250px] py-6 flex justify-between items-start">
                 <div className="">
                   <Link href={`/posts/category/${data.tag}/`}>
                     <p className="text-base font-medium">
@@ -91,35 +90,37 @@ export default function Post({ post, relatedPosts }) {
                 </div>
               </div>
             </div>
-            <div className="mx-auto w-[70%] flex flex-col items-center">
-              <div className="relative mt-[-100px] w-full h-[500px] rounded-[35px] overflow-hidden cover-shadow">
-                <Image
-                  className="object-cover"
-                  src={data.coverImage}
-                  fill
-                  alt="Post Cover Image"
-                />
-              </div>
-              <div
-                className="w-[90%] my-10 mx-auto postbody"
-                dangerouslySetInnerHTML={{ __html: postbody }}
-              ></div>
-            </div>
-            <>
-              {!relatedPosts ? (
-                ""
-              ) : (
-                <div className="w-full flex flex-col justify-between items-center">
-                  <h1 className="my-12 text-3xl font-extrabold">
-                    Related Articles
-                  </h1>
-                  <PostCardsLayout
-                    posts={relatedPosts}
-                    cardType="related-posts"
+            <PageLayout>
+              <div className="mx-auto w-[75%] flex flex-col items-center">
+                <div className="relative mt-[-100px] w-full h-[500px] rounded-[35px] overflow-hidden cover-shadow">
+                  <Image
+                    className="object-cover"
+                    src={data.coverImage}
+                    fill
+                    alt="Post Cover Image"
                   />
                 </div>
-              )}
-            </>
+                <div
+                  className="w-[90%] my-10 mx-auto postbody"
+                  dangerouslySetInnerHTML={{ __html: postbody }}
+                ></div>
+              </div>
+              <>
+                {!relatedPosts ? (
+                  ""
+                ) : (
+                  <div className="w-full flex flex-col justify-between items-center">
+                    <h1 className="my-12 text-3xl font-extrabold">
+                      Related Articles
+                    </h1>
+                    <PostCardsLayout
+                      posts={relatedPosts}
+                      cardType="related-posts"
+                    />
+                  </div>
+                )}
+              </>
+            </PageLayout>
           </main>
         </article>
       )}
@@ -145,7 +146,7 @@ export async function getStaticPaths() {
 
 export async function getStaticProps(context) {
   const { cat, slug } = context.params;
-  const { data, content, realSlug } = getPostBySlugs(slug);
+  const { data, content } = getPostBySlugs(slug);
   const postbody = await markdownToHtml(content);
 
   const relatedPosts = getRelatedPosts(cat, slug);

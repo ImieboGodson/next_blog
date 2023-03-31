@@ -1,14 +1,12 @@
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
-import Layout from "@/components/Layout";
+import MainLayout from "@/components/MainLayout";
 import "@/styles/globals.css";
 
 export default function App({ Component, pageProps }) {
   return (
-    <Layout>
-      <Header />
+    <MainLayout>
       <Component {...pageProps} />
-      <Footer />
-    </Layout>
+    </MainLayout>
   );
 }

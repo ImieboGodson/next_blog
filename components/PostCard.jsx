@@ -9,7 +9,6 @@ export function PostCard({ post, cardType }) {
 
   return (
     <div
-      key={realSlug}
       className={`w-full min-h-fit grid grid-cols-1 grid-rows-2 gap-4 ${
         cardType === "normal"
           ? "first:grid-cols-2 first:grid-rows-1 first:gap-0 first:col-span-full first:topPost"
