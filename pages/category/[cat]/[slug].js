@@ -29,7 +29,7 @@ export default function Post({ post, relatedPosts }) {
             <div className="relative flex justify-center items-start p-10 bg-black text-white">
               <div className="w-[70%] h-[250px] py-6 flex justify-between items-start">
                 <div className="">
-                  <Link href={`/posts/category/${data.tag}/`}>
+                  <Link href={`/category/${data.tag}/`}>
                     <p className="text-base font-medium">
                       {formatCategory(data.tag)}
                     </p>

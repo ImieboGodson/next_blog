@@ -14,7 +14,7 @@ export default function PostsCategoryNavbar({ page }) {
             All
           </li>
         </Link>
-        <Link href="/posts/category/nft">
+        <Link href="/category/nft">
           <li
             className={`mx-3 py-2 px-6 text-sm rounded-[10px] ${
               page === "nft" ? "bg-black text-white" : ""
@@ -23,7 +23,7 @@ export default function PostsCategoryNavbar({ page }) {
             NFT
           </li>
         </Link>
-        <Link href="/posts/category/technology">
+        <Link href="/category/technology">
           <li
             className={`mx-3 py-2 px-6 text-sm rounded-[10px] ${
               page === "technology" ? "bg-black text-white" : ""
@@ -32,7 +32,7 @@ export default function PostsCategoryNavbar({ page }) {
             Technology
           </li>
         </Link>
-        <Link href="/posts/category/ai">
+        <Link href="/category/ai">
           <li
             className={`mx-3 py-2 px-6 text-sm rounded-[10px] ${
               page === "ai" ? "bg-black text-white" : ""
@@ -41,7 +41,7 @@ export default function PostsCategoryNavbar({ page }) {
             Artificial Intelligence
           </li>
         </Link>
-        <Link href="/posts/category/crypto">
+        <Link href="/category/crypto">
           <li
             className={`mx-3 py-2 px-6 text-sm rounded-[10px] ${
               page === "crypto" ? "bg-black text-white" : ""

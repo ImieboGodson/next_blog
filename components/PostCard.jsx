@@ -15,7 +15,7 @@ export function PostCard({ post, cardType }) {
           : ""
       }`}
     >
-      <Link href={`/posts/category/${data.tag}/${realSlug}`}>
+      <Link href={`/category/${data.tag}/${realSlug}`}>
         <div
           className={`relative w-full min-h-[270px] h-full rounded-[20px] overflow-hidden cursor-pointer ${
             cardType === "normal" ? "coverPicture" : ""
@@ -30,7 +30,7 @@ export function PostCard({ post, cardType }) {
         </div>
       </Link>
       <div className="w-full min-h-fit flex flex-col justify-between items-start p-4">
-        <Link href={`/posts/category/${data.tag}`}>
+        <Link href={`/category/${data.tag}`}>
           <p
             className={`text-sm {
             cardType === "normal" ? "category-text" : ""
@@ -39,7 +39,7 @@ export function PostCard({ post, cardType }) {
             {formatCategory(data.tag)}
           </p>
         </Link>
-        <Link href={`/posts/category/${data.tag}/${realSlug}`}>
+        <Link href={`/category/${data.tag}/${realSlug}`}>
           <h1
             className={`w-[95%] mt-4 text-lg font-semibold hover:underline cursor-pointer ${
               cardType === "normal" ? "post-title" : ""
