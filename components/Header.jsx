@@ -1,21 +1,11 @@
-import Image from "next/image";
 import Link from "next/link";
 import React from "react";
+import Logo from "./Logo";
 
 export default function Header() {
   return (
-    <div className="px-11 py-8 flex item-center justify-between">
-      <Link href="/">
-        <div className="relative w-[48px] h-[48px] overflow-hidden">
-          {/* <p className="tracking-tighter text-3xl font-extrabold">METALBOX</p> */}
-          <Image
-            className="w-full h-full object-cover"
-            fill
-            alt="Logo"
-            src="/logo.png"
-          />
-        </div>
-      </Link>
+    <div className="max-w-[1200px] mx-auto px-11 py-8 flex items-center justify-between">
+      <Logo size={48} />
       {/* <ul className="flex justify-center items-center">
         <Link href="/">
           <li className="mx-3 p-2 text-sm">Blog</li>
@@ -27,12 +17,11 @@ export default function Header() {
           <li className="mx-3 p-2 text-sm">Contact Us</li>
         </Link>
       </ul> */}
-      {/* <Link
-        href="/"
-        className="px-5 py-2 text-sm rounded bg-black text-white shadow-[0px_5px_15px_0px_rgba(0,0,0,0.15)]"
-      >
-        Log In
-      </Link> */}
+      <Link href="/">
+        <div className="flex items-center px-5 py-2 text-sm rounded bg-[#2F58CD] text-white shadow-[0px_5px_15px_0px_rgba(0,0,0,0.15)]">
+          Contact Us
+        </div>
+      </Link>
     </div>
   );
 }

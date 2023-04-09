@@ -18,7 +18,7 @@ export default function PostsLayout({ children }) {
   return (
     <div className="w-full mt-3 p-4 relative">
       <div className="flex flex-col justify-center items-center">
-        <div className="w-full h-[170px] bg-black text-white rounded-[38px] flex justify-center items-center">
+        <div className="w-full h-[190px] bg-[#7f3aed] text-white rounded-[38px] flex justify-center items-center">
           <p className="tracking-wide text-4xl font-bold">Blog</p>
         </div>
         <SearchForm />
