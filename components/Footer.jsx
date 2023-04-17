@@ -14,7 +14,7 @@ import {
 
 export default function Footer() {
   return (
-    <div className="max-w-[1200px] mx-auto mt-20 py-5 px-20 flex flex-col justify-between items-center border-t-[1px] border-black bg-[#CFB997]">
+    <div className="max-w-[1200px] mx-auto mt-20 py-5 px-20 flex flex-col justify-between items-center border-t-[1px] border-black bg-[#F6F1E9]">
       <div className="my-12 w-full flex justify-between items-center">
         <div className="h-full flex flex-col justify-between items-start">
           <Logo size={58} />

@@ -2,7 +2,7 @@ import React from "react";
 
 export default function SearchForm() {
   return (
-    <div className="mt-[-28px] px-2 overflow-hidden flex justify-center items-center w-[500px] h-[56px] bg-white rounded-[15px] search-shadow">
+    <div className="mt-[-28px] px-2 overflow-hidden flex justify-center items-center w-[500px] h-[56px] bg-white rounded-[15px] z-10 search-shadow">
       <div className="w-[5%] p-2 mr-2">
         <svg
           xmlns="http://www.w3.org/2000/svg"

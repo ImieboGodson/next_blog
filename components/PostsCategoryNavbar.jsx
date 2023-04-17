@@ -8,7 +8,7 @@ export default function PostsCategoryNavbar({ page }) {
         <Link href="/">
           <li
             className={`mx-3 py-2 px-6 text-sm rounded-[10px] ${
-              page === "home" ? "bg-black text-white" : ""
+              page === "home" ? "bg-[#2192FF] text-white" : ""
             }`}
           >
             All
@@ -17,7 +17,7 @@ export default function PostsCategoryNavbar({ page }) {
         <Link href="/category/nft">
           <li
             className={`mx-3 py-2 px-6 text-sm rounded-[10px] ${
-              page === "nft" ? "bg-black text-white" : ""
+              page === "nft" ? "bg-[#2192FF] text-white" : ""
             }`}
           >
             NFT
@@ -26,7 +26,7 @@ export default function PostsCategoryNavbar({ page }) {
         <Link href="/category/technology">
           <li
             className={`mx-3 py-2 px-6 text-sm rounded-[10px] ${
-              page === "technology" ? "bg-black text-white" : ""
+              page === "technology" ? "bg-[#2192FF] text-white" : ""
             }`}
           >
             Technology
@@ -35,7 +35,7 @@ export default function PostsCategoryNavbar({ page }) {
         <Link href="/category/ai">
           <li
             className={`mx-3 py-2 px-6 text-sm rounded-[10px] ${
-              page === "ai" ? "bg-black text-white" : ""
+              page === "ai" ? "bg-[#2192FF] text-white" : ""
             }`}
           >
             Artificial Intelligence
@@ -44,7 +44,7 @@ export default function PostsCategoryNavbar({ page }) {
         <Link href="/category/crypto">
           <li
             className={`mx-3 py-2 px-6 text-sm rounded-[10px] ${
-              page === "crypto" ? "bg-black text-white" : ""
+              page === "crypto" ? "bg-[#2192FF] text-white" : ""
             }`}
           >
             Crypto

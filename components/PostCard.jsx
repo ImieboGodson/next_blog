@@ -32,7 +32,7 @@ export function PostCard({ post, cardType }) {
       <div className="w-full min-h-fit flex flex-col justify-between items-start p-4">
         <Link href={`/category/${data.tag}`}>
           <p
-            className={`text-sm {
+            className={`text-sm text-[#2192FF] {
             cardType === "normal" ? "category-text" : ""
           }`}
           >
@@ -41,7 +41,7 @@ export function PostCard({ post, cardType }) {
         </Link>
         <Link href={`/category/${data.tag}/${realSlug}`}>
           <h1
-            className={`w-[95%] mt-4 text-lg font-semibold hover:underline cursor-pointer ${
+            className={`w-[95%] mt-4 text-lg font-semibold hover:underline cursor-pointer text-[#2A2F4F] ${
               cardType === "normal" ? "post-title" : ""
             }`}
           >
@@ -49,7 +49,7 @@ export function PostCard({ post, cardType }) {
           </h1>
         </Link>
         <p
-          className={`mt-4 text-sm ${
+          className={`mt-4 text-sm text-[#7B8FA1] ${
             cardType === "normal" ? "exrcept-text" : ""
           }`}
         >
@@ -74,7 +74,7 @@ export function PostCard({ post, cardType }) {
           </div>
           <div className="flex flex-col justify-start items-start">
             <p
-              className={`text-sm font-semibold ${
+              className={`text-sm font-semibold text-[#2A2F4F] ${
                 cardType === "normal" ? "authorName" : ""
               }`}
             >

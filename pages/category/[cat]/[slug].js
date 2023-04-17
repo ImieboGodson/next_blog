@@ -12,6 +12,8 @@ import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
+import { FaInstagram, FaDribbble } from "react-icons/fa";
+import { FiTwitter, FiLinkedin, FiTriangle, FiStar } from "react-icons/fi";
 
 export default function Post({ post, relatedPosts }) {
   const { data, postbody } = post;
@@ -26,11 +28,11 @@ export default function Post({ post, relatedPosts }) {
             <meta property="og:image" content={post.data.ogImage.url} />
           </Head>
           <main className="">
-            <div className="relative flex justify-center items-start p-10 bg-black text-white">
+            <div className="relative flex justify-center items-start p-10 bg-[#00235B] text-white">
               <div className="w-[70%] h-[250px] py-6 flex justify-between items-start">
                 <div className="">
                   <Link href={`/category/${data.tag}/`}>
-                    <p className="text-base font-medium">
+                    <p className="text-base font-medium text-[#2192FF]">
                       {formatCategory(data.tag)}
                     </p>
                   </Link>
@@ -41,33 +43,18 @@ export default function Post({ post, relatedPosts }) {
                 <div className="flex flex-col justify-end items-end">
                   <div className="flex justify-center items-end">
                     <Link href="/">
-                      <div className="relative mx-[4px] w-[58px] h-[58px] rounded-full flex justify-center items-center bg-white overflow-hidden">
-                        <Image
-                          src="/assets/icons/linkedin-in.svg"
-                          width={23}
-                          height={23}
-                          alt="social link"
-                        />
+                      <div className="relative mx-[4px] w-[48px] h-[48px] rounded-full flex justify-center items-center bg-[#635985] overflow-hidden">
+                        <FaInstagram className="text-[#fff]" size={18} />
                       </div>
                     </Link>
                     <Link href="/">
-                      <div className="relative mx-[4px] w-[58px] h-[58px] rounded-full flex justify-center items-center bg-white overflow-hidden">
-                        <Image
-                          src="/assets/icons/instagram.svg"
-                          width={23}
-                          height={23}
-                          alt="social link"
-                        />
+                      <div className="relative mx-[4px] w-[48px] h-[48px] rounded-full flex justify-center items-center bg-[#2192FF] overflow-hidden">
+                        <FiTwitter className="text-[#fff]" size={18} />
                       </div>
                     </Link>
                     <Link href="/">
-                      <div className="relative ml-[4px] w-[58px] h-[58px] rounded-full flex justify-center items-center bg-white overflow-hidden">
-                        <Image
-                          src="/assets/icons/twitter.svg"
-                          width={23}
-                          height={23}
-                          alt="social link"
-                        />
+                      <div className="relative ml-[4px] w-[48px] h-[48px] rounded-full flex justify-center items-center bg-[#635985] overflow-hidden">
+                        <FiLinkedin className="text-[#fff]" size={18} />
                       </div>
                     </Link>
                   </div>
@@ -101,7 +88,7 @@ export default function Post({ post, relatedPosts }) {
                   />
                 </div>
                 <div
-                  className="w-[90%] my-10 mx-auto postbody"
+                  className="w-[90%] my-10 mx-auto postbody text-[#2A2F4F]"
                   dangerouslySetInnerHTML={{ __html: postbody }}
                 ></div>
               </div>

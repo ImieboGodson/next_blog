@@ -18,8 +18,16 @@ export default function PostsLayout({ children }) {
   return (
     <div className="w-full mt-3 p-4 relative">
       <div className="flex flex-col justify-center items-center">
-        <div className="w-full h-[190px] bg-[#7f3aed] text-white rounded-[38px] flex justify-center items-center">
-          <p className="tracking-wide text-4xl font-bold">Blog</p>
+        <div className="w-full h-[190px] relative bg-[#6F38C5] text-white rounded-[38px] flex justify-center items-center">
+          {/* <div className={`z-10 w-[${20}px] h-[${20}px] overflow-hidden`}>
+            <Image
+              className="w-full h-full object-cover"
+              fill
+              alt="icon"
+              src="/assets/icons/scribble.png"
+            />
+          </div> */}
+          <p className="tracking-wide text-4xl font-bold ">Blog</p>
         </div>
         <SearchForm />
         <PostsCategoryNavbar page={page} />
