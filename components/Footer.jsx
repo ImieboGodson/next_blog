@@ -55,37 +55,37 @@ export default function Footer() {
               <FaTwitter size={22} />
             </li>
           </Link>
-          <Link href="/about-us">
+          <Link href="/">
             <li className="mx-2 p-2 text-sm">
               <FaDiscord size={22} />
             </li>
           </Link>
-          <Link href="/contact-us">
+          <Link href="/">
             <li className="mx-2 p-2 text-sm">
               <FaLinkedinIn size={22} />
             </li>
           </Link>
-          <Link href="/about-us">
+          <Link href="/">
             <li className="mx-2 p-2 text-sm">
               <FaTiktok size={22} />
             </li>
           </Link>
-          <Link href="/about-us">
+          <Link href="/">
             <li className="mx-2 p-2 text-sm">
               <FaInstagram size={22} />
             </li>
           </Link>
-          <Link href="/contact-us">
+          <Link href="/">
             <li className="mx-2 p-2 text-sm">
               <FaPinterest size={22} />
             </li>
           </Link>
-          <Link href="/contact-us">
+          <Link href="/">
             <li className="mx-2 p-2 text-sm">
               <FaYoutube size={22} />
             </li>
           </Link>
-          <Link href="/contact-us">
+          <Link href="/">
             <li className="mx-2 p-2 text-sm">
               <FaRss size={22} />
             </li>

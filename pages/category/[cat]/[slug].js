@@ -43,23 +43,23 @@ export default function Post({ post, relatedPosts }) {
                 <div className="flex flex-col justify-end items-end">
                   <div className="flex justify-center items-end">
                     <Link href="/">
-                      <div className="relative mx-[4px] w-[48px] h-[48px] rounded-full flex justify-center items-center bg-[#635985] overflow-hidden">
+                      <div className="relative mx-[5px] w-[48px] h-[48px] rounded-full flex justify-center items-center bg-[#635985] overflow-hidden">
                         <FaInstagram className="text-[#fff]" size={18} />
                       </div>
                     </Link>
                     <Link href="/">
-                      <div className="relative mx-[4px] w-[48px] h-[48px] rounded-full flex justify-center items-center bg-[#2192FF] overflow-hidden">
+                      <div className="relative mx-[5px] w-[48px] h-[48px] rounded-full flex justify-center items-center bg-[#2192FF] overflow-hidden">
                         <FiTwitter className="text-[#fff]" size={18} />
                       </div>
                     </Link>
                     <Link href="/">
-                      <div className="relative ml-[4px] w-[48px] h-[48px] rounded-full flex justify-center items-center bg-[#635985] overflow-hidden">
+                      <div className="relative ml-[5px] w-[48px] h-[48px] rounded-full flex justify-center items-center bg-[#635985] overflow-hidden">
                         <FiLinkedin className="text-[#fff]" size={18} />
                       </div>
                     </Link>
                   </div>
                   <div className="mt-6 flex justify-start items-center">
-                    <div className="mr-4 w-[2.6rem] h-[2.6rem] relative rounded-full overflow-hidden authorPhoto">
+                    <div className="mr-3 w-[2.6rem] h-[2.6rem] relative rounded-full overflow-hidden authorPhoto">
                       <Image
                         className="object-cover"
                         fill
