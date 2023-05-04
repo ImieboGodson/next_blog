@@ -3,13 +3,14 @@ import truncateText from "@/lib/truncateText";
 import Image from "next/image";
 import Link from "next/link";
 import Time from "./Time";
+import { HiArrowUpRight } from "react-icons/hi2";
 
 export function PostCard({ post, cardType }) {
   const { data, realSlug } = post;
 
   return (
     <div
-      className={`w-full min-h-fit grid grid-cols-1 grid-rows-2 gap-4 ${
+      className={`group w-full min-h-fit grid grid-cols-1 grid-rows-2 gap-4 ${
         cardType === "normal"
           ? "first:grid-cols-2 first:grid-rows-1 first:gap-0 first:col-span-full first:topPost"
           : ""
@@ -27,6 +28,10 @@ export function PostCard({ post, cardType }) {
             alt="post cover image"
             src={data.coverImage}
           />
+          <div className="hidden group-hover:flex absolute left-0 right-0 top-0 bottom-0 z-10 bg-[#0000006c]"></div>
+          <span className="hidden absolute group-hover:flex justify-center items-center w-[70px] h-[70px] rounded-full left-[42%] top-[40%] z-[100] bg-[#2192FF] text-white">
+            <HiArrowUpRight size={25} />
+          </span>
         </div>
       </Link>
       <div className="w-full min-h-fit flex flex-col justify-between items-start p-4">

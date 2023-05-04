@@ -11,7 +11,9 @@ export default function Header() {
     <div className="max-w-[1200px] mx-auto px-11 py-8 flex items-center justify-between">
       <div className="flex justify-center items-center">
         <Logo size={30} />
-        <p className="text-xl font-bold">etalBox</p>
+        <Link href="/">
+          <p className="text-xl font-bold">etalBox</p>
+        </Link>
       </div>
       <ul className="flex justify-center items-center">
         <li className="group mx-3 relative px-2 py-1">
