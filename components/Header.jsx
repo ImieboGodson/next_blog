@@ -23,7 +23,7 @@ export default function Header() {
           </span>
           <Link
             href="/"
-            className="text-sm font-normal text-[#7B8FA1] group-hover:text-[#2192FF]"
+            className="text-xs font-medium text-[#7B8FA1] group-hover:text-[#2192FF]"
           >
             Services
           </Link>
@@ -35,7 +35,7 @@ export default function Header() {
           </span>
           <Link
             href="/"
-            className="text-sm font-normal text-[#7B8FA1] group-hover:text-[#2192FF]"
+            className="text-xs font-medium text-[#7B8FA1] group-hover:text-[#2192FF]"
           >
             Creative Studio
           </Link>
@@ -51,7 +51,7 @@ export default function Header() {
           </span>
           <Link
             href="/"
-            className={`text-sm font-normal ${
+            className={`text-xs font-medium ${
               route.includes("/")
                 ? "text-[#2192FF]"
                 : "text-[#7B8FA1] group-hover:text-[#2192FF]"
@@ -67,7 +67,7 @@ export default function Header() {
           </span>
           <Link
             href="/"
-            className="text-sm font-normal text-[#7B8FA1] group-hover:text-[#2192FF]"
+            className="text-xs font-medium text-[#7B8FA1] group-hover:text-[#2192FF]"
           >
             About us
           </Link>

@@ -46,7 +46,7 @@ export function PostCard({ post, cardType }) {
         </Link>
         <Link href={`/category/${data.tag}/${realSlug}`}>
           <h1
-            className={`w-[95%] mt-4 text-lg font-semibold hover:underline cursor-pointer text-[#2A2F4F] ${
+            className={`w-[95%] mt-4 text-lg font-semibold group-hover:underline cursor-pointer text-[#2A2F4F] ${
               cardType === "normal" ? "post-title" : ""
             }`}
           >

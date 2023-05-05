@@ -29,14 +29,20 @@ export default function Post({ post, relatedPosts }) {
           </Head>
           <main className="">
             <div className="relative flex justify-center items-start p-10 bg-[#00235B] text-white">
+              <span className="absolute left-[8%] top-[80%] rotate-12 flex justify-center items-center text-[#FF6D60]">
+                <FiStar size={38} />
+              </span>
+              <span className="absolute right-[10%] top-[20%] rotate-45 flex justify-center items-center text-[#00FFCA]">
+                <FiTriangle size={35} />
+              </span>
               <div className="w-[70%] h-[250px] py-6 flex justify-between items-start">
                 <div className="">
                   <Link href={`/category/${data.tag}/`}>
-                    <p className="text-base font-medium text-[#2192FF]">
+                    <p className="text-sm font-normal text-[#19A7CE]">
                       {formatCategory(data.tag)}
                     </p>
                   </Link>
-                  <h1 className="mt-6 w-[80%] text-4xl font-extrabold">
+                  <h1 className="mt-6 w-[80%] text-4xl font-bold">
                     {data.title}
                   </h1>
                 </div>
@@ -68,7 +74,7 @@ export default function Post({ post, relatedPosts }) {
                       />
                     </div>
                     <div className="flex flex-col justify-start items-start">
-                      <p className="text-sm font-semibold authorName">
+                      <p className="text-xs font-semibold authorName">
                         {data.author.name}
                       </p>
                       <Time dateString={data.date} />
