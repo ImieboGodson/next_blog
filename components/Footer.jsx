@@ -37,7 +37,7 @@ export default function Footer() {
                   placeholder="Enter Your Email Address"
                 />
                 <button
-                  className="px-8 py-2 text-sm font-bold bg-[#000000c9] hover:bg-black text-white"
+                  className="px-4 md:px-8 py-2 text-sm font-bold bg-[#000000c9] hover:bg-black text-white"
                   type="submit"
                 >
                   Subscribe
