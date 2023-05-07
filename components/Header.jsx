@@ -6,7 +6,6 @@ import { useRouter } from "next/router";
 
 export default function Header() {
   const { route } = useRouter();
-  console.log(route);
   return (
     <div className="max-w-[1200px] mx-auto px-11 py-8 flex items-center justify-between">
       <div className="flex justify-center items-center">

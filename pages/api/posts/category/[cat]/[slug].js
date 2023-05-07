@@ -7,7 +7,7 @@ export default function handler(req, res) {
   const slugs = getPostSlugs();
 
   const { cat, slug } = query;
-  console.log(cat);
+  // console.log(cat);
 
   if (method === "GET") {
     //Check for validity of category passed in request

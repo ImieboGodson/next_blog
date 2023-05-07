@@ -2,7 +2,7 @@ import { getPostSlugs, getPostBySlugs } from "@/lib/getPosts";
 
 export default function handler(req, res) {
   const { method, query } = req;
-  console.log(query);
+  // console.log(query);
 
   const categories = ["nft", "ai", "technology", "crypto"];
 
