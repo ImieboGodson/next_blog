@@ -1,14 +1,14 @@
 ---
-title: 'Dark Comedy On AI Shows'
-tag: 'ai'
+title: 'Desk Setups In The Midst Of These Lay-offs'
+tag: 'crypto'
 excerpt: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Praesent elementum facilisis leo vel fringilla est ullamcorper eget.'
-coverImage: '/assets/posts/dark-comedy/rick-morty.jpg'
-date: '2023-02-10T05:35:07.322Z'
+coverImage: '/assets/posts/desk-setups-in-the-midst/desk-setup.jpg'
+date: '2023-04-10T05:45:07.322Z'
 author:
-  name: Freddy Cook
-  picture: 'https://randomuser.me/api/portraits/med/men/1.jpg'
+  name: Steve Janssen
+  picture: 'https://randomuser.me/api/portraits/med/men/52.jpg'
 ogImage:
-  url: '/assets/posts/dark-comedy/rick-morty.jpg'
+  url: '/assets/posts/desk-setups-in-the-midst/desk-setup.jpg'
 ---
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Praesent elementum facilisis leo vel fringilla est ullamcorper eget. At imperdiet dui accumsan sit amet nulla facilities morbi tempus. Praesent elementum facilisis leo vel fringilla. Congue mauris rhoncus aenean vel. Egestas sed tempus urna et pharetra pharetra massa massa ultricies.

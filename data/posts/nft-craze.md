@@ -3,7 +3,7 @@ title: 'NFT Craze Is Very Much Alive -- NFT Crowd'
 tag: 'nft'
 excerpt: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Praesent elementum facilisis leo vel fringilla est ullamcorper eget. At imperdiet dui accumsan sit amet nulla facilities morbi tempus.'
 coverImage: '/assets/posts/nft-craze/barbora.jpg'
-date: '2022-05-18T05:35:07.322Z'
+date: '2023-03-18T05:35:07.322Z'
 author:
   name: Tim Neutkens
   picture: 'https://randomuser.me/api/portraits/med/men/3.jpg'

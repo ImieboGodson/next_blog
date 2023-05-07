@@ -3,7 +3,7 @@ title: 'VR Got Us Stuck Inside Our Room And Away From Life'
 tag: 'technology'
 excerpt: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Praesent elementum facilisis leo vel fringilla est ullamcorper eget.'
 coverImage: '/assets/posts/vr-got-us-inside/inside.jpg'
-date: '2022-02-28T05:35:07.322Z'
+date: '2023-02-28T05:35:07.322Z'
 author:
   name: Harry Gunter
   picture: 'https://randomuser.me/api/portraits/med/men/9.jpg'

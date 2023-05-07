@@ -1,14 +1,14 @@
 ---
-title: 'Dark Comedy On AI Shows'
-tag: 'ai'
+title: 'The Theory Of Ethereum Replacing Bitcoin Might Be Wrong'
+tag: 'crypto'
 excerpt: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Praesent elementum facilisis leo vel fringilla est ullamcorper eget.'
-coverImage: '/assets/posts/dark-comedy/rick-morty.jpg'
-date: '2023-02-10T05:35:07.322Z'
+coverImage: '/assets/posts/ethereum-replacing-bitcoin/ethereum.jpg'
+date: '2023-03-16T05:35:07.322Z'
 author:
-  name: Freddy Cook
-  picture: 'https://randomuser.me/api/portraits/med/men/1.jpg'
+  name: Simisola Ireoluwa
+  picture: 'https://randomuser.me/api/portraits/med/women/50.jpg'
 ogImage:
-  url: '/assets/posts/dark-comedy/rick-morty.jpg'
+  url: '/assets/posts/ethereum-replacing-bitcoin/ethereum.jpg'
 ---
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Praesent elementum facilisis leo vel fringilla est ullamcorper eget. At imperdiet dui accumsan sit amet nulla facilities morbi tempus. Praesent elementum facilisis leo vel fringilla. Congue mauris rhoncus aenean vel. Egestas sed tempus urna et pharetra pharetra massa massa ultricies.

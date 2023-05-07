@@ -3,7 +3,7 @@ title: 'Humans Are Still Smart'
 tag: 'ai'
 excerpt: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Praesent elementum facilisis leo vel fringilla est ullamcorper eget.'
 coverImage: '/assets/posts/humans-are-still-smart/be-smart.jpg'
-date: '2022-07-16T05:35:07.322Z'
+date: '2023-05-16T05:35:07.322Z'
 author:
   name: Katty Thomas
   picture: 'https://randomuser.me/api/portraits/med/women/51.jpg'

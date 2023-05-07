@@ -3,7 +3,7 @@ title: 'NFT Is Still A Winner For Artists'
 tag: 'nft'
 excerpt: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Praesent elementum facilisis leo vel fringilla est ullamcorper eget. At imperdiet dui accumsan sit amet nulla facilities morbi tempus.'
 coverImage: '/assets/posts/nft-still-gold/best-nft-arts.jpg'
-date: '2022-06-06T06:35:07.322Z'
+date: '2023-04-06T06:35:07.322Z'
 author:
   name: JJ Kasper
   picture: 'https://randomuser.me/api/portraits/med/men/5.jpg'

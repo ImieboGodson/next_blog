@@ -3,7 +3,7 @@ title: 'NFT Mllionaires: How Do They Spend Their Money?'
 tag: 'nft'
 excerpt: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Praesent elementum facilisis leo vel fringilla est ullamcorper eget.'
 coverImage: '/assets/posts/nft-millionaires/nft-1.jpg'
-date: '2022-06-17T04:35:07.322Z'
+date: '2023-03-17T04:35:07.322Z'
 author:
   name: Blake Thomas
   picture: 'https://randomuser.me/api/portraits/med/men/4.jpg'

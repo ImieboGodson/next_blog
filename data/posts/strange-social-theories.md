@@ -3,7 +3,7 @@ title: 'Strange Social Theories About The Metaverse'
 tag: 'technology'
 excerpt: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Praesent elementum facilisis leo vel fringilla est ullamcorper eget.'
 coverImage: '/assets/posts/strange-social-theories/off-face.jpg'
-date: '2022-04-16T05:35:07.322Z'
+date: '2023-04-16T05:35:07.322Z'
 author:
   name: Jefferson Lemur
   picture: 'https://randomuser.me/api/portraits/med/men/6.jpg'

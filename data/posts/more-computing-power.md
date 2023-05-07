@@ -1,14 +1,14 @@
 ---
-title: 'Colors And The Art Of Crypto In The City'
-tag: 'crypto'
+title: 'The Need For More Computing Power'
+tag: 'ai'
 excerpt: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Praesent elementum facilisis leo vel fringilla est ullamcorper eget.'
-coverImage: '/assets/posts/colors-and-art/colors-and-art.jpg'
-date: '2022-03-16T05:35:07.322Z'
+coverImage: '/assets/posts/more-computing-power/server.jpg'
+date: '2023-07-01T05:35:07.322Z'
 author:
-  name: Simisola Ireoluwa
-  picture: 'https://randomuser.me/api/portraits/med/women/50.jpg'
+  name: Myral Green
+  picture: 'https://randomuser.me/api/portraits/med/women/55.jpg'
 ogImage:
-  url: '/assets/posts/colors-and-art/colors-and-art.jpg'
+  url: '/assets/posts/more-computing-power/server.jpg'
 ---
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Praesent elementum facilisis leo vel fringilla est ullamcorper eget. At imperdiet dui accumsan sit amet nulla facilities morbi tempus. Praesent elementum facilisis leo vel fringilla. Congue mauris rhoncus aenean vel. Egestas sed tempus urna et pharetra pharetra massa massa ultricies.

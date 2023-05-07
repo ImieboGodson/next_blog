@@ -1,14 +1,14 @@
 ---
-title: 'Dark Comedy On AI Shows'
+title: 'The AI Revolution Finally Arrived'
 tag: 'ai'
 excerpt: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Praesent elementum facilisis leo vel fringilla est ullamcorper eget.'
-coverImage: '/assets/posts/dark-comedy/rick-morty.jpg'
-date: '2023-02-10T05:35:07.322Z'
+coverImage: '/assets/posts/the-ai-revolution/ai.jpg'
+date: '2023-04-04T05:35:07.322Z'
 author:
-  name: Freddy Cook
-  picture: 'https://randomuser.me/api/portraits/med/men/1.jpg'
+  name: Josephine White
+  picture: 'https://randomuser.me/api/portraits/med/women/53.jpg'
 ogImage:
-  url: '/assets/posts/dark-comedy/rick-morty.jpg'
+  url: '/assets/posts/the-ai-revolution/ai.jpg'
 ---
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Praesent elementum facilisis leo vel fringilla est ullamcorper eget. At imperdiet dui accumsan sit amet nulla facilities morbi tempus. Praesent elementum facilisis leo vel fringilla. Congue mauris rhoncus aenean vel. Egestas sed tempus urna et pharetra pharetra massa massa ultricies.
