@@ -23,15 +23,6 @@ body {
   box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
 }
 
-/* .grid-layout > :first-child
-{
-  background: #000;
-} */
-
-.topPost {
-  background: #000;
-}
-
 .postbody {
   @apply text-lg leading-relaxed;
 }
@@ -51,7 +42,7 @@ body {
   @apply text-2xl mt-8 mb-4 leading-snug;
 }
 
-@media (min-width: 756px) {
+@media (min-width: 768px) {
   .grid-layout > :first-child .coverPicture {
     width: 94%;
     min-height: 355px;
