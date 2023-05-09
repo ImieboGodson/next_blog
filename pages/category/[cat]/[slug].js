@@ -1,5 +1,6 @@
 import PageLayout from "@/components/PageLayout";
 import PostCardsLayout from "@/components/PostCardsLayout";
+import RelatedPosts from "@/components/RelatedPosts";
 import Time from "@/components/Time";
 import formatCategory from "@/lib/formatCategory";
 import {
@@ -102,15 +103,7 @@ export default function Post({ post, relatedPosts }) {
                 {!relatedPosts ? (
                   ""
                 ) : (
-                  <div className="w-full flex flex-col justify-between items-center">
-                    <h1 className="my-12 text-3xl font-extrabold">
-                      Related Articles
-                    </h1>
-                    <PostCardsLayout
-                      posts={relatedPosts}
-                      cardType="related-posts"
-                    />
-                  </div>
+                  <RelatedPosts relatedPosts={relatedPosts} />
                 )}
               </>
             </PageLayout>
