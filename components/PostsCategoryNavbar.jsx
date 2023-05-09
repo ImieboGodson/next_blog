@@ -4,10 +4,10 @@ import React from "react";
 export default function PostsCategoryNavbar({ page }) {
   return (
     <div className="my-10">
-      <ul className="flex justify-center items-center">
+      <ul className="flex flex-wrap justify-center items-center">
         <Link href="/">
           <li
-            className={`mx-3 py-2 px-6 text-sm rounded-[10px] ${
+            className={`mx-1 md:mx-3 py-2 px-5 md:px-6 text-sm rounded-[10px] ${
               page === "home" ? "bg-[#2192FF] text-white" : ""
             }`}
           >
@@ -16,7 +16,7 @@ export default function PostsCategoryNavbar({ page }) {
         </Link>
         <Link href="/category/nft">
           <li
-            className={`mx-3 py-2 px-6 text-sm rounded-[10px] ${
+            className={`mx-1 md:mx-3 py-2 px-5 md:px-6 text-sm rounded-[10px] ${
               page === "nft" ? "bg-[#2192FF] text-white" : ""
             }`}
           >
@@ -25,7 +25,7 @@ export default function PostsCategoryNavbar({ page }) {
         </Link>
         <Link href="/category/technology">
           <li
-            className={`mx-3 py-2 px-6 text-sm rounded-[10px] ${
+            className={`mx-1 md:mx-3 py-2 px-5 md:px-6 text-sm rounded-[10px] ${
               page === "technology" ? "bg-[#2192FF] text-white" : ""
             }`}
           >
@@ -34,7 +34,7 @@ export default function PostsCategoryNavbar({ page }) {
         </Link>
         <Link href="/category/ai">
           <li
-            className={`mx-3 py-2 px-6 text-sm rounded-[10px] ${
+            className={`mx-1 md:mx-3 py-2 px-5 md:px-6 text-sm rounded-[10px] ${
               page === "ai" ? "bg-[#2192FF] text-white" : ""
             }`}
           >
@@ -43,7 +43,7 @@ export default function PostsCategoryNavbar({ page }) {
         </Link>
         <Link href="/category/crypto">
           <li
-            className={`mx-3 py-2 px-6 text-sm rounded-[10px] ${
+            className={`mx-1 md:mx-3 py-2 px-5 md:px-6 text-sm rounded-[10px] ${
               page === "crypto" ? "bg-[#2192FF] text-white" : ""
             }`}
           >
