@@ -28,11 +28,11 @@ export default function Header() {
         {!menuOpen ? <FiMenu size={25} /> : <RxCross2 size={25} />}
       </span>
       <div
-        className={`fixed top-[70px] bottom-0 left-0 right-0 bg-white z-[100] ${
+        className={`fixed top-[70px] bottom-0 left-0 right-0 lg:flex lg:relative lg:top-0 lg:w-[100%] bg-white z-[100] ${
           menuOpen ? "flex" : "hidden"
-        } justify-center items-start lg:items-center p-10 lg:p-0`}
+        } justify-center lg:justify-end items-start lg:items-center p-10 lg:p-0`}
       >
-        <div className="flex flex-col lg:flex-row justify-between items-center">
+        <div className="flex flex-col lg:flex-row justify-between items-center lg:w-[80%]">
           <ul className="flex flex-col lg:flex-row justify-center items-center">
             <li
               className="group mx-3 relative px-2 py-1"
