@@ -30,27 +30,27 @@ export default function Post({ post, relatedPosts }) {
           </Head>
           <main className="">
             <div className="relative flex justify-center items-start p-10 bg-[#00235B] text-white">
-              <span className="absolute left-[8%] top-[80%] rotate-12 flex justify-center items-center text-[#FF6D60]">
+              <span className="absolute left-[4%] md:left-[8%] bottom-[25%] md:bottom-[10%] rotate-12 flex justify-center items-center text-[#FF6D60]">
                 <FiStar size={38} />
               </span>
-              <span className="absolute right-[10%] top-[20%] rotate-45 flex justify-center items-center text-[#00FFCA]">
+              <span className="absolute right-[10%] top-[10%] md:top-[20%] rotate-45 flex justify-center items-center text-[#00FFCA]">
                 <FiTriangle size={35} />
               </span>
-              <div className="w-[70%] h-[250px] py-6 flex justify-between items-start">
+              <div className="w-[90%] lg:w-[70%] h-fit md:h-[250px] pt-4 pb-20 md:py-6 flex flex-col md:flex-row justify-between items-start">
                 <div className="">
                   <Link href={`/category/${data.tag}/`}>
                     <p className="text-sm font-normal text-[#19A7CE]">
                       {formatCategory(data.tag)}
                     </p>
                   </Link>
-                  <h1 className="mt-6 w-[80%] text-4xl font-bold">
+                  <h1 className="mt-6 w-[80%] text-2xl md:text-4xl font-bold">
                     {data.title}
                   </h1>
                 </div>
-                <div className="flex flex-col justify-end items-end">
+                <div className="mt-8 md:mt-0 flex flex-col justify-start items-start md:justify-end md:items-end">
                   <div className="flex justify-center items-end">
                     <Link href="/">
-                      <div className="relative mx-[5px] w-[48px] h-[48px] rounded-full flex justify-center items-center bg-[#635985] overflow-hidden">
+                      <div className="relative ml-0 mr-[5px] md:mx-[5px] w-[48px] h-[48px] rounded-full flex justify-center items-center bg-[#635985] overflow-hidden">
                         <FaInstagram className="text-[#fff]" size={18} />
                       </div>
                     </Link>
@@ -65,7 +65,7 @@ export default function Post({ post, relatedPosts }) {
                       </div>
                     </Link>
                   </div>
-                  <div className="mt-6 flex justify-start items-center">
+                  <div className="mt-3 md:mt-6 flex justify-start items-center">
                     <div className="mr-3 w-[2.6rem] h-[2.6rem] relative rounded-full overflow-hidden authorPhoto">
                       <Image
                         className="object-cover"
@@ -85,8 +85,8 @@ export default function Post({ post, relatedPosts }) {
               </div>
             </div>
             <PageLayout>
-              <div className="mx-auto w-[75%] flex flex-col items-center">
-                <div className="relative mt-[-100px] w-full h-[500px] rounded-[35px] overflow-hidden cover-shadow">
+              <div className="mx-auto w-[92%] lg:w-[75%] flex flex-col items-center">
+                <div className="relative mt-[-100px] w-full h-[300px] md:h-[450px] lg:h-[500px] rounded-[35px] overflow-hidden cover-shadow">
                   <Image
                     className="object-cover"
                     src={data.coverImage}
