@@ -19,7 +19,7 @@ export function PostCard({ post, cardType }) {
       <Link href={`/category/${data.tag}/${realSlug}`}>
         <div
           className={`relative w-full md:min-h-[270px] h-full rounded-[20px] overflow-hidden cursor-pointer ${
-            cardType === "normal" ? "md:coverPicture" : ""
+            cardType === "normal" ? "md: coverPicture" : ""
           }`}
         >
           <Image
@@ -38,7 +38,7 @@ export function PostCard({ post, cardType }) {
         <Link href={`/category/${data.tag}`}>
           <p
             className={`text-sm text-[#2192FF] {
-            cardType === "normal" ? "md:category-text" : ""
+            cardType === "normal" ? "md: category-text" : ""
           }`}
           >
             {formatCategory(data.tag)}
@@ -47,7 +47,7 @@ export function PostCard({ post, cardType }) {
         <Link href={`/category/${data.tag}/${realSlug}`}>
           <h1
             className={`w-[95%] mt-4 text-lg font-semibold group-hover:underline cursor-pointer text-[#2A2F4F] ${
-              cardType === "normal" ? "md:post-title" : ""
+              cardType === "normal" ? "md: post-title" : ""
             }`}
           >
             {data.title}
@@ -55,19 +55,19 @@ export function PostCard({ post, cardType }) {
         </Link>
         <p
           className={`mt-4 text-sm text-[#7B8FA1] ${
-            cardType === "normal" ? "md:exrcept-text" : ""
+            cardType === "normal" ? "md: exrcept-text" : ""
           }`}
         >
           {truncateText(130, data.excerpt)}
         </p>
         <div
           className={`mt-4 flex justify-start items-center ${
-            cardType === "normal" ? "md:authorDetail" : ""
+            cardType === "normal" ? "md: authorDetail" : ""
           }`}
         >
           <div
             className={`mr-4 w-[2.6rem] h-[2.6rem] relative rounded-full overflow-hidden ${
-              cardType === "normal" ? "md:authorPhoto" : ""
+              cardType === "normal" ? "md: authorPhoto" : ""
             }`}
           >
             <Image
@@ -80,7 +80,7 @@ export function PostCard({ post, cardType }) {
           <div className="flex flex-col justify-start items-start">
             <p
               className={`text-sm font-semibold text-[#2A2F4F] ${
-                cardType === "normal" ? "md:authorName" : ""
+                cardType === "normal" ? "md: authorName" : ""
               }`}
             >
               {data.author.name}
