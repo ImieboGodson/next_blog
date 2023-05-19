@@ -2,24 +2,34 @@ import Image from "next/image";
 import { useRouter } from "next/router";
 import React, { useEffect, useState } from "react";
 import PostsCategoryNavbar from "./PostsCategoryNavbar";
-import SearchForm from "./SearchForm";
+import Search from "./Search";
 import { FiCircle, FiTriangle } from "react-icons/fi";
-import { GiCrown, GiVibratingSmartphone } from "react-icons/gi";
-import { AiOutlineSave } from "react-icons/ai";
+import { GiCrown } from "react-icons/gi";
+import SearchButton from "./SearchButton";
+import PostCardsLayout from "./PostCardsLayout";
 
-export default function PostsLayout({ children }) {
+export default function PostsLayout({ posts }) {
   const [page, setPage] = useState("home");
+  const [showSearch, setShowSearch] = useState(false);
+
   const router = useRouter();
+
+  function handleShowSearch() {
+    setShowSearch(!showSearch);
+  }
+
   useEffect(() => {
-    if (router.query.cat) {
-      setPage(router.query.cat);
-    } else {
-      setPage("home");
-    }
+    router.query.cat ? setPage(router.query.cat) : setPage("home");
   }, [router]);
 
   return (
-    <div className="w-full mt-3 p-4 relative">
+    <div className="w-full mt-3 p-4 min-h-fit text-stone-700">
+      <Search
+        posts={posts}
+        page={page}
+        showSearch={showSearch}
+        handleShowSearch={handleShowSearch}
+      />
       <div className="flex flex-col justify-center items-center">
         <div className="w-full h-[190px] relative bg-[#6F38C5] text-white md:rounded-[38px] flex justify-center items-center">
           <span className="absolute left-[20%] top-[25%] flex justify-center items-center text-[#2192FF]">
@@ -35,10 +45,14 @@ export default function PostsLayout({ children }) {
             <p className="tracking-wide text-4xl font-bold">Blog</p>
           </div>
         </div>
-        <SearchForm />
+        <SearchButton page={page} handleShowSearch={handleShowSearch} />
         <PostsCategoryNavbar page={page} />
       </div>
-      {children}
+      {!posts ? (
+        <p>No Posts Available at the Moment</p>
+      ) : (
+        <PostCardsLayout posts={posts} cardType="normal" />
+      )}
     </div>
   );
 }

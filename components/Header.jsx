@@ -13,7 +13,7 @@ export default function Header() {
     <div
       className={`${
         menuOpen ? "fixed top-0 right-0 left-0 bg-white" : "relative"
-      } max-w-[1200px] mx-auto px-4 md:px-11 py-8 flex items-center justify-between z-[101]`}
+      } max-w-[1200px] mx-auto px-4 md:px-11 py-8 flex items-center justify-between z-20`}
     >
       <div className="flex justify-center items-center">
         <Logo size={30} />

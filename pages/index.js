@@ -4,6 +4,7 @@ import PostsLayout from "@/components/PostsLayout";
 import PostCardsLayout from "@/components/PostCardsLayout";
 import { getAllPosts } from "@/lib/getPosts";
 import PageLayout from "@/components/PageLayout";
+import { SearchForm } from "@/components/Search";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -19,17 +20,7 @@ export default function Home({ posts }) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <PageLayout>
-        <main className="w-full min-h-fit flex items-top justify-center text-stone-700">
-          <PostsLayout>
-            <main className=" mt-8">
-              {!posts ? (
-                <p>No Posts Available at the Moment</p>
-              ) : (
-                <PostCardsLayout posts={posts} cardType="normal" />
-              )}
-            </main>
-          </PostsLayout>
-        </main>
+        <PostsLayout posts={posts} />
       </PageLayout>
     </>
   );
