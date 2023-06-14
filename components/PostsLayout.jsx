@@ -10,13 +10,8 @@ import PostCardsLayout from "./PostCardsLayout";
 
 export default function PostsLayout({ posts }) {
   const [page, setPage] = useState("home");
-  const [showSearch, setShowSearch] = useState(false);
 
   const router = useRouter();
-
-  function handleShowSearch() {
-    setShowSearch(!showSearch);
-  }
 
   useEffect(() => {
     router.query.cat ? setPage(router.query.cat) : setPage("home");
@@ -24,12 +19,7 @@ export default function PostsLayout({ posts }) {
 
   return (
     <div className="w-full mt-3 p-4 min-h-fit text-stone-700">
-      <Search
-        posts={posts}
-        page={page}
-        showSearch={showSearch}
-        handleShowSearch={handleShowSearch}
-      />
+      <Search posts={posts} page={page} />
       <div className="flex flex-col justify-center items-center">
         <div className="w-full h-[190px] relative bg-[#6F38C5] text-white md:rounded-[38px] flex justify-center items-center">
           <span className="absolute left-[20%] top-[25%] flex justify-center items-center text-[#2192FF]">
@@ -45,7 +35,7 @@ export default function PostsLayout({ posts }) {
             <p className="tracking-wide text-4xl font-bold">Blog</p>
           </div>
         </div>
-        <SearchButton page={page} handleShowSearch={handleShowSearch} />
+        <SearchButton page={page} />
         <PostsCategoryNavbar page={page} />
       </div>
       {!posts ? (

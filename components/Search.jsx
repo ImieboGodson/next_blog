@@ -4,14 +4,17 @@ import React, { useState } from "react";
 import { RiSearch2Line } from "react-icons/ri";
 import Time from "./Time";
 import Link from "next/link";
+import { useStore } from "@/store/store";
 
-export default function Search({ page, posts, showSearch, handleShowSearch }) {
+export default function Search({ page, posts }) {
   const [searchText, setSearchText] = useState("");
   const searchResults = useSearch(posts, searchText);
 
+  const { setCloseSearch, isOpen } = useStore();
+
   const handleSearchClose = () => {
     setSearchText("");
-    handleShowSearch();
+    setCloseSearch();
   };
 
   return (
@@ -19,7 +22,7 @@ export default function Search({ page, posts, showSearch, handleShowSearch }) {
       <div
         onClick={() => handleSearchClose()}
         className={`${
-          showSearch ? "flex" : "hidden"
+          isOpen ? "flex" : "hidden"
         } fixed overflow-hidden top-0 right-0 left-0 h-screen justify-center items-start bg-slate-900/95 z-30`}
       >
         <div
@@ -53,6 +56,7 @@ export default function Search({ page, posts, showSearch, handleShowSearch }) {
 }
 
 function Results({ searchResults }) {
+  const { setCloseSearch } = useStore();
   if (!searchResults) return null;
   return (
     <>
@@ -70,6 +74,7 @@ function Results({ searchResults }) {
                 key={index}
                 href={`/category/${result.tag}/${result.slug}`}
                 className="w-full"
+                onClick={setCloseSearch}
               >
                 <div className="w-full py-3 px-2 md:px-6 flex justify-start items-center cursor-pointer hover:bg-[#DBDFEA]">
                   <div className="overflow-hidden rounded-md mr-2">

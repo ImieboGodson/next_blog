@@ -3,13 +3,17 @@ import PostCardsLayout from "@/components/PostCardsLayout";
 import PostsLayout from "@/components/PostsLayout";
 import formatCategory from "@/lib/formatCategory";
 import { getAllCategory, getPostsByCategory } from "@/lib/getPosts";
+import { useStore } from "@/store/store";
 import Head from "next/head";
 import { useRouter } from "next/router";
-import React from "react";
+import React, { useEffect } from "react";
 
 export default function Category({ posts }) {
   const { query } = useRouter();
   const categoryText = formatCategory(query.cat);
+
+  const { storePosts, setPosts } = useStore();
+
   return (
     <div>
       <Head>
