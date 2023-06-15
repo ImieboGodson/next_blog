@@ -1,12 +1,7 @@
 import Head from "next/head";
-import { Inter } from "next/font/google";
 import PostsLayout from "@/components/PostsLayout";
-import PostCardsLayout from "@/components/PostCardsLayout";
 import { getAllPosts } from "@/lib/getPosts";
 import PageLayout from "@/components/PageLayout";
-import { SearchForm } from "@/components/Search";
-
-const inter = Inter({ subsets: ["latin"] });
 
 export default function Home({ posts }) {
   return (

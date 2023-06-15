@@ -1,12 +1,12 @@
 import Link from "next/link";
 import React, { useState } from "react";
-import Logo from "./Logo";
+import Logo from "../Logo";
 import { FaBehance, FaDribbble } from "react-icons/fa";
 import { FiMenu } from "react-icons/fi";
 import { RxCross2 } from "react-icons/rx";
 import { useRouter } from "next/router";
 
-export default function Header() {
+export default function Navbar() {
   const { route } = useRouter();
   const [menuOpen, setMenuOpen] = useState(false);
   return (
@@ -15,12 +15,12 @@ export default function Header() {
         menuOpen ? "fixed top-0 right-0 left-0 bg-white" : "relative"
       } max-w-[1200px] mx-auto px-4 md:px-11 py-8 flex items-center justify-between z-20`}
     >
-      <div className="flex justify-center items-center">
-        <Logo size={30} />
-        <Link href="/">
+      <Link href="/" className="min-w-fit">
+        <div className="flex justify-center items-end">
+          <Logo size={30} />
           <p className="text-xl font-bold">etalBox</p>
-        </Link>
-      </div>
+        </div>
+      </Link>
       <span
         className="flex lg:hidden cursor-pointer"
         onClick={() => setMenuOpen(!menuOpen)}

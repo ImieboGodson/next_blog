@@ -18,7 +18,9 @@ export default function Footer() {
       <div className="max-w-[1250px] mx-auto py-5 px-5 lg:px-20 flex flex-col justify-between items-center">
         <div className="my-12 w-full flex flex-col md:flex-row justify-between items-start md:items-center">
           <div className="h-full flex flex-col justify-between items-start">
-            <Logo size={58} />
+            <Link href="/">
+              <Logo size={58} />
+            </Link>
             <p className="mt-2 text-lg">MetalBox Inc.</p>
           </div>
           <div className="mt-10 md:mt-0 flex flex-col justify-between items-end">
